@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Just do it.</h1>
+    </header>
+    <main class="main">
+        <section class="add__task">
+            <input type="text" id="task__input" placeholder="Add a task.">
+            <button class="add__task__button" id="enter">I Got This!</button>
+        </section>
+        <section class="date">
+            <p class="date__time" id="time"></p>
+        </section>
+        <section class="task__list">
+            <ul class="task__list__items">
+                <li class="tasks" data-id="1">
+                    <span class="todo__item">prueba</span>
+                    <div class="buttons">
+                        <a href="" class="check-btn">
+                            <img src="storage/img/check-svgrepo-com.svg" alt="check">
+                        </a>
+                        <a href="" class="delete-btn">
+                            <img src="storage/img/trash-svgrepo-com.svg" alt="trash">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
