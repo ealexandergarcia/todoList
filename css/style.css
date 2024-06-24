@@ -77,7 +77,7 @@ body {
 
 .task__list__items {
     max-width: 420px;
-    max-height: 350px;
+    max-height: var(--height--task--list);
     width: 100%;
     overflow: auto;
     animation: load 0.5s forwards;
@@ -157,3 +157,9 @@ body {
 .fecha{
     color: var(--color1);
 }
+
+@media (min-width: 768px) {
+    .task__list__items{
+        --height--task--list:500px
+    }
+  }
