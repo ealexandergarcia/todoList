@@ -1,4 +1,4 @@
-export const taskList = (res) =>{
+export const taskList = async (res) =>{
     let plantilla = "";
     res.forEach(element => {
         plantilla +=/*html*/`
