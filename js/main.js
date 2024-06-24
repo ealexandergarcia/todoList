@@ -44,7 +44,7 @@ taskListItems.addEventListener("click", async (e) => {
   if (e.target.classList.contains("check__btn")) {
     const taskId = e.target.parentNode.parentNode.dataset.id;
     const task = await getTask(taskId); // obtener el task actual
-    const newStatus = task.status === "on hold"? "ready" : "on hold";
+    const newStatus = task.status === "On hold"? "ready" : "On hold";
     const updatedTask = { status: newStatus };
     await updateTask(taskId, updatedTask).then((data) => {
       console.log(data);
