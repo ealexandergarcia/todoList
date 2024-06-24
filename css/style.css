@@ -86,8 +86,8 @@ body {
     gap: 10px;
 }
 
-.delete-btn,
-.check-btn {
+.delete__btn,
+.check__btn {
     width: 30px;
     height: 30px;
     background: aliceblue;
@@ -95,11 +95,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.delete-btn img,
-.check-btn img {
-    width: 20px;
+.delete__btn {
+    background-image: url(../storage/img/trash-svgrepo-com.svg);
+}
+
+.check__btn {
+    background-image: url(../storage/img/check-svgrepo-com.svg);
 }
 
 .tasks {

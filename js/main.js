@@ -1,5 +1,5 @@
 import { taskList } from "./components/list.js";
-import { createTask, getAllTask } from "./module/app.js";
+import { createTask, deleteTask, getAllTask } from "./module/app.js";
 
 // Selección de elementos del DOM
 const taskListItems = document.querySelector(".task__list__items");
@@ -25,6 +25,18 @@ addTaskButton.addEventListener("click", async (e) => {
   taskInput.value = null;
   await createTask(newTask);
   document.dispatchEvent(taskUpdatedEvent);
+});
+
+// Evento click del botón "Borrar tarea"
+taskListItems.addEventListener("click", (e) => {
+    if (e.target.classList.contains("delete__btn")) {
+      const taskId = e.target.parentNode.parentNode.dataset.id;
+      console.log(taskId);
+      deleteTask(taskId).then((data) => {
+        console.log(data);
+        document.dispatchEvent(taskUpdatedEvent);
+      });
+    }
 });
 
 // Listener para el evento taskUpdated
