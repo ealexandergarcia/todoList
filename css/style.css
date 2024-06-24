@@ -78,7 +78,7 @@ body {
     max-height: 350px;
     width: 100%;
     overflow: auto;
-    transition: background-color 200ms ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .buttons {
@@ -119,6 +119,7 @@ body {
     transition: background-color 200ms ease-in-out;
     background: rgb(26, 27, 27);
     color: var(--color1);
+    transition: all 0.3s ease;
 }
 
 .completed {

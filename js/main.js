@@ -1,5 +1,5 @@
 import { taskList } from "./components/list.js";
-import { createTask, deleteTask, getAllTask } from "./module/app.js";
+import { createTask, deleteTask, getAllTask, updateTask } from "./module/app.js";
 
 // Selección de elementos del DOM
 const taskListItems = document.querySelector(".task__list__items");
@@ -38,6 +38,17 @@ taskListItems.addEventListener("click", (e) => {
       });
     }
 });
+
+taskListItems.addEventListener("click", async (e) => {
+    if (e.target.classList.contains("check__btn")) {
+      const taskId = e.target.parentNode.parentNode.dataset.id;
+      const task = {status: "ready" };
+      await updateTask(taskId, task).then((data) => {
+        console.log(data);
+        document.dispatchEvent(taskUpdatedEvent);
+      });
+    }
+  });
 
 // Listener para el evento taskUpdated
 document.addEventListener('taskUpdated', updateTaskList);
