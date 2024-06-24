@@ -5,9 +5,17 @@ import { createTask, deleteTask, getAllTask, getTask, updateTask } from "./modul
 const taskListItems = document.querySelector(".task__list__items");
 const addTaskButton = document.querySelector(".add__task__button");
 const taskInput = document.querySelector("#task__input");
+const date = document.querySelector(".date");
 
 // Evento personalizado
 const taskUpdatedEvent = new Event('taskUpdated');
+
+// Renderizado de fecha y hora
+setInterval(() => {
+  date.innerHTML = /*html*/`
+    <p class="fecha">${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}</p>
+  `;
+}, 1000); // actualiza cada 1 segundo
 
 // Función para actualizar la lista de tareas
 let updateTaskList= async () =>{

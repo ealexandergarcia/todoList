@@ -147,3 +147,13 @@ body {
     filter: brightness(0.5);
     text-decoration: line-through;
 }
+
+.date{
+    margin: 1.2rem 0 0.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.fecha{
+    color: var(--color1);
+}
