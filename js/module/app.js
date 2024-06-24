@@ -45,3 +45,13 @@ export const updateTask = async (taskId, task) => {
   let data = await res.json();
   return data;
 }
+
+export const getTask = async (taskId) => {
+  const url = `https://6677385c145714a1bd742329.mockapi.io/task/${taskId}`;
+  const options = {
+    method: 'GET'
+  };
+  let res = await fetch(url, options);
+  let data = await res.json();
+  return data;
+}

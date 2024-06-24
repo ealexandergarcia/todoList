@@ -2,7 +2,6 @@ export const taskList = async (res) =>{
     let plantilla = "";
     res.forEach(element => {
         let clase = element.status === "ready"? "completed" : "";
-        console.log(element.status);
         plantilla +=/*html*/`
         <li class="tasks ${clase}" data-id="${element.id}">
             <span class="todo__item">${element.task} </span>
